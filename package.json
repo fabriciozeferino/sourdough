@@ -1,0 +1,14 @@
+{
+  "name": "sourdough",
+  "version": "1.0.0",
+  "description": "Sourdough Miner",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "author": "Fabricio Zeferino",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^8.0.0"
+  }
+}
