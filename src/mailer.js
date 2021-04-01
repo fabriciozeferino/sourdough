@@ -17,7 +17,7 @@ const main = async (emailBody) => {
 			from: 'Fabricio <fabriciozeferino@gmail.com>',
 
 			// Comma separated list of recipients
-			to: 'Viviana <fabriciozeferino84@gmail.com>',
+			to: 'Viviana <viviana.pd@gmail.com>, Fabricio <fabriciozeferino@gmail.com>',
 
 			// Subject of the message
 			subject: 'Latest sales added to H&M ✔',
