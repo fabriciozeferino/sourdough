@@ -4,7 +4,10 @@ const {scrapePromotions} = require('./scrape')
 const {newEmail} = require('./mailer')
 
 //Get data before override by new search
-const fileData = fs.readFileSync('./src/data/data.json', 'utf8');
+const jsonPath = path.join(__dirname, 'data', 'data.json');
+
+console.log(jsonPath)
+const fileData = fs.readFileSync(jsonPath, 'utf8');
 
 const previousSearch = JSON.parse(fileData.toString())
 
@@ -14,7 +17,7 @@ scrapePromotions().then(item => {
 	let absolutePath = path.basename("data.json");
 
 	//Save in file
-	fs.writeFile('./src/data/' + absolutePath, newScrapeStringify, (err) => {
+	fs.writeFile(jsonPath, newScrapeStringify, (err) => {
 		if (err) {
 			throw err;
 		}
